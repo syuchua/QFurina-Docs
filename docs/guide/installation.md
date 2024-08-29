@@ -33,10 +33,25 @@ Docker 部署是最简单和推荐的方式，它已经集成了 [NapCat](https:
    docker-compose up -d
    ```
 
-4. 查看日志：
+4. 进入napcat目录编辑配置文件：
 
    ```bash
-   docker-compose logs -f
+   cd napcat/config && vim onebot11.json
+   ```
+   修改reverseWS:
+   ```json
+   {
+      "reverseWs":{
+         "enable": true,
+         "urls": ["ws://my_qbot:8011/ws"]
+      }
+   }
+
+
+5. 查看napcat日志，扫码登录：
+
+   ```bash
+   docker logs napcat
    ```
 
 ## 本地部署

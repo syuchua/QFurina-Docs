@@ -6,6 +6,10 @@ Lagrange 是一个跨平台的 QQ 客户端，本指南将帮助您将 QFurina �
 
 1. 确保您已经安装了 QFurina。
 2. 下载并安装 Lagrange。
+   官方文档：
+
+   https://lagrangedev.github.io/Lagrange.Doc/
+   
 3. 在 Lagrange 中启用 OneBot 协议支持。
 
 ## 配置步骤
@@ -14,19 +18,28 @@ Lagrange 是一个跨平台的 QQ 客户端，本指南将帮助您将 QFurina �
    - 打开 Lagrange 设置
    - 找到 OneBot 协议设置
    - 启用 OneBot 协议
-   - 设置监听地址和端口（例如：`127.0.0.1:5700`）
+   - 设置监听地址和端口(修改配置文件)
+   ```
+    {
+      "Type": "ReverseWebSocket",
+      "Host": "0.0.0.0",
+      "Port": 8011,
+      "Suffix": "/ws",
+      "ReconnectInterval": 5000,
+      "HeartBeatInterval": 5000,
+      "HeartBeatEnable": true,
+      "AccessToken": "",
+    },
+    ```
 
 2. 编辑 QFurina 的配置文件 `config/config.json`：
 
    ```json
    {
-     "connection_type": "ws_reverse",
-     "ws_reverse_url": "ws://127.0.0.1:5700",
-     "use_http": false
+     "connection_type": "ws_reverse"
    }
    ```
 
-   确保 `ws_reverse_url` 与 Lagrange 中设置的地址和端口一致。
 
 3. 启动 Lagrange 和 QFurina 服务。
 
@@ -39,6 +52,9 @@ Lagrange 是一个跨平台的 QQ 客户端，本指南将帮助您将 QFurina �
    ```
 
 2. 检查 QFurina 的日志输出，确保没有连接错误。
+   如果连接无误的话，你可以看到：
+
+   ![](https://img.yuchu.me/file/f8f9c5d0cbe210269acb6.png)
 
 3. 在 Lagrange 中向机器人发送消息，测试是否能正常回复。
 

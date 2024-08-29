@@ -5,6 +5,9 @@ Llonebot 是一个流行的 QQ 机器人框架，本指南将帮助您将 QFurin
 ## 准备工作
 
 1. 确保您已经安装了 QFurina 和 Llonebot。
+   这里贴上llonebot官方教程地址：
+   https://llonebot.github.io/zh-CN/
+
 2. 获取 Llonebot 的连接信息（通常是 WebSocket 地址和端口）。
 
 ## 配置步骤
@@ -13,25 +16,22 @@ Llonebot 是一个流行的 QQ 机器人框架，本指南将帮助您将 QFurin
 
    ```json
    {
-     "connection_type": "ws_reverse",
-     "ws_reverse_url": "ws://your_llonebot_ip:your_port",
-     "ws_reverse_api_url": "ws://your_llonebot_ip:your_port/api",
-     "ws_reverse_event_url": "ws://your_llonebot_ip:your_port/event",
-     "use_http": false
+     "connection_type": "ws_reverse"
    }
    ```
-
-   将 `your_llonebot_ip` 和 `your_port` 替换为您的 Llonebot 实际地址和端口。
 
 2. 在 Llonebot 的配置文件中，确保启用了反向 WebSocket 连接：
 
    ```yaml
    servers:
      - ws_reverse:
-         universal: ws://127.0.0.1:8080/onebot/v11/ws
+         universal: ws://127.0.0.1:8011/ws
    ```
 
-   这里的地址应该与 QFurina 运行的地址和端口相匹配。
+   或者用图形化界面配置
+
+   ![](https://cdn.jsdelivr.net/gh/mazhijia/jsdeliver@main/img/20240720181142.png)
+
 
 3. 重启 Llonebot 和 QFurina 服务。
 
@@ -44,6 +44,9 @@ Llonebot 是一个流行的 QQ 机器人框架，本指南将帮助您将 QFurin
    ```
 
 2. 检查 QFurina 的日志输出，确保没有连接错误。
+   如果连接无误的话，你可以看到：
+
+   ![](https://img.yuchu.me/file/f8f9c5d0cbe210269acb6.png)
 
 3. 在 QQ 中向机器人发送消息，测试是否能正常回复。
 

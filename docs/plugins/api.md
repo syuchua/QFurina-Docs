@@ -1,13 +1,6 @@
 # 插件基类
 
 ```python
-import os, json
-from abc import ABC, abstractmethod
-from typing import Dict, Any, List
-from app.logger import logger
-from app.Core.config import Config
-
-config = Config.get_instance()
 
 class PluginBase(ABC):
     plugins: Dict[str, Any] = {}
@@ -107,9 +100,6 @@ class PluginBase(ABC):
 
 # onebotv11相关配置
 ```python
-# onebot v11.py
-from enum import Enum
-from typing import TypedDict, List, Union
 
 # 定义消息类型枚举
 class MessageType(Enum):
