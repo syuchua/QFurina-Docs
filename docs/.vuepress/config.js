@@ -3,8 +3,18 @@ import { defineUserConfig } from 'vuepress/cli'
 import { viteBundler } from '@vuepress/bundler-vite'
 import { searchPlugin } from '@vuepress/plugin-search'
 import { mediumZoomPlugin } from '@vuepress/plugin-medium-zoom'
+import { copyCodePlugin } from '@vuepress/plugin-copy-code'
 
 export default defineUserConfig({
+
+  locales: {
+    '/': {
+      lang: 'zh-CN',
+      title: 'QFurina',
+      description: '一个简单的QQ机器人后端框架，支持AI对话、绘图、语音、联网等功能以及支持自定义的插件系统',
+    },
+  },
+
   lang: 'zh-CN',
   title: 'QFurina',
   description: '一个简单的QQ机器人后端框架，支持AI对话、绘图、语音、联网等功能以及支持自定义的插件系统',
@@ -12,6 +22,7 @@ export default defineUserConfig({
   head: [
     ['link', { rel: 'icon', href: '/images/logo.png' }],
     ['meta', { name: 'theme-color', content: '#3eaf7c' }],
+    ['link', { rel: 'canonical', href: 'https://qfurina.yuchu.me' }],
     ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
     ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }]
   ],
@@ -47,6 +58,14 @@ export default defineUserConfig({
             { text: 'QFurina 简介', link: '/guide/' },
             { text: '安装与配置', link: '/guide/installation' },
             { text: '基本使用', link: '/guide/usage' },
+            {
+              text: '平台对接',
+              children: [
+                { text: 'Llonebot', link: '/guide/platforms/llonebot' },
+                { text: 'NapCat', link: '/guide/platforms/napcat' },
+                { text: 'Lagrange', link: '/guide/platforms/lagrange' },
+              ],
+            },
           ],
         },
       ],
@@ -88,11 +107,21 @@ export default defineUserConfig({
     editLinkText: '在 GitHub 上编辑此页',
     lastUpdated: true,
     lastUpdatedText: '上次更新',
-    contributorsText: '贡献者',
-  }),
+    contributors: false
+    }),
 
   bundler: viteBundler(),
-  base: '/QFurina-Docs/',
+  base: '/',
+
+
+  markdown: {
+    headers: {
+      level: [2, 3, 4]
+    },
+    code: {
+      lineNumbers: true
+    }
+  },
 
   plugins: [
     searchPlugin({
@@ -101,6 +130,9 @@ export default defineUserConfig({
           placeholder: '搜索文档',
         },
       },
+    }),
+    copyCodePlugin({
+      showInMobile: true,
     }),
     mediumZoomPlugin({}),
   ],
