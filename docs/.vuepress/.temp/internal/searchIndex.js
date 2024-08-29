@@ -36,50 +36,14 @@ export const SEARCH_INDEX = [
     "extraFields": []
   },
   {
-    "title": "QFurina - QQ机器人项目",
-    "headers": [
-      {
-        "level": 2,
-        "title": "主要功能",
-        "slug": "主要功能",
-        "link": "#主要功能",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "支持的消息平台",
-        "slug": "支持的消息平台",
-        "link": "#支持的消息平台",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "快速开始",
-        "slug": "快速开始",
-        "link": "#快速开始",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "贡献",
-        "slug": "贡献",
-        "link": "#贡献",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "许可",
-        "slug": "许可",
-        "link": "#许可",
-        "children": []
-      }
-    ],
+    "title": "",
+    "headers": [],
     "path": "/",
     "pathLocale": "/",
     "extraFields": []
   },
   {
-    "title": "",
+    "title": "插件生命周期函数",
     "headers": [],
     "path": "/api/client.html",
     "pathLocale": "/",
@@ -96,13 +60,6 @@ export const SEARCH_INDEX = [
     "title": "",
     "headers": [],
     "path": "/api/plugin.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "",
-    "headers": [],
-    "path": "/api/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -168,23 +125,9 @@ export const SEARCH_INDEX = [
       },
       {
         "level": 2,
-        "title": "配置选项",
-        "slug": "配置选项",
-        "link": "#配置选项",
-        "children": []
-      },
-      {
-        "level": 2,
         "title": "注意事项",
         "slug": "注意事项",
         "link": "#注意事项",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "高级用法",
-        "slug": "高级用法",
-        "link": "#高级用法",
         "children": []
       }
     ],
@@ -211,13 +154,6 @@ export const SEARCH_INDEX = [
       },
       {
         "level": 2,
-        "title": "配置选项",
-        "slug": "配置选项",
-        "link": "#配置选项",
-        "children": []
-      },
-      {
-        "level": 2,
         "title": "注意事项",
         "slug": "注意事项",
         "link": "#注意事项",
@@ -228,13 +164,6 @@ export const SEARCH_INDEX = [
         "title": "高级用法",
         "slug": "高级用法",
         "link": "#高级用法",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "安全性考虑",
-        "slug": "安全性考虑",
-        "link": "#安全性考虑",
         "children": []
       }
     ],
@@ -347,13 +276,6 @@ export const SEARCH_INDEX = [
       }
     ],
     "path": "/guide/",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "",
-    "headers": [],
-    "path": "/guide/usage.html",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -618,6 +540,13 @@ export const SEARCH_INDEX = [
     "title": "",
     "headers": [],
     "path": "/404.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "",
+    "headers": [],
+    "path": "/api/",
     "pathLocale": "/",
     "extraFields": []
   }

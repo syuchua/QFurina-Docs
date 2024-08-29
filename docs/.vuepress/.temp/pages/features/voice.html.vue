@@ -8,30 +8,17 @@
 <li><strong>自定义参数</strong>：允许调整语速、音调等参数。</li>
 </ol>
 <h2 id="使用方法" tabindex="-1"><a class="header-anchor" href="#使用方法"><span>使用方法</span></a></h2>
-<ol>
-<li>
-<p><strong>生成语音消息</strong>：
-使用特定命令将文本转换为语音。</p>
-<p>例如：<code v-pre>/tts 你好，我是 QFurina</code></p>
-</li>
-<li>
-<p><strong>切换音色</strong>：
-选择不同的音色来生成语音。</p>
-<p>例如：<code v-pre>/voice 女声1 你好，很高兴认识你</code></p>
-</li>
-<li>
-<p><strong>调整语音参数</strong>：
-使用参数来自定义语音效果。</p>
-<p>例如：<code v-pre>/tts -s 1.2 -p 1.1 这是一条快速且高音的语音消息</code></p>
-</li>
-</ol>
+<p>语音功能需要自行配置<a href="https://cloud.yuchu.me/s/J2um" target="_blank" rel="noopener noreferrer">gpt-sovits整合包</a></p>
+<p>使用特定命令来让机器人发送语音。</p>
+<p>例如：<code v-pre>#voice (想要发送的语音)</code></p>
+<p>或者交给机器人自由发挥：</p>
+<p>例如：<code v-pre>想听芙芙的语音了，你如果想发送语音的话，可以把#voice标签放在回复的开头。</code></p>
 <h2 id="配置选项" tabindex="-1"><a class="header-anchor" href="#配置选项"><span>配置选项</span></a></h2>
 <p>在 <code v-pre>config.json</code> 文件中，您可以自定义语音处理功能的行为：</p>
 <ul>
-<li><code v-pre>tts_api</code>: 设置使用的文本转语音 API</li>
-<li><code v-pre>default_voice</code>: 设置默认使用的音色</li>
-<li><code v-pre>voice_speed</code>: 设置默认语速</li>
-<li><code v-pre>voice_pitch</code>: 设置默认音调</li>
+<li><code v-pre>voice_service_url</code>: 设置使用的文本转语音 API</li>
+<li><code v-pre>cha_name</code>: 使用的音色</li>
+<li><code v-pre>audio_save_path</code>: 音频文件保存位置</li>
 </ul>
 <h2 id="注意事项" tabindex="-1"><a class="header-anchor" href="#注意事项"><span>注意事项</span></a></h2>
 <ul>
@@ -40,11 +27,10 @@
 <li>使用第三方 API 时，请注意遵守相关的使用条款和限制。</li>
 </ul>
 <h2 id="高级用法" tabindex="-1"><a class="header-anchor" href="#高级用法"><span>高级用法</span></a></h2>
-<ul>
-<li><strong>语音合成与 AI 对话结合</strong>：将 AI 生成的回复直接转换为语音消息。</li>
-<li><strong>多语言支持</strong>：使用不同语言的音色来生成多语言语音消息。</li>
-<li><strong>情感分析</strong>：根据文本内容自动选择合适的语气和情感。</li>
-</ul>
+<p>发送音乐：将音乐文件(.mp3,.wav)放入<code v-pre>data/music</code>目录下，使用命令<code v-pre>music_list</code>查看歌曲列表
+发送<code v-pre>点歌</code>+<code v-pre>歌曲名</code>点歌，支持模糊匹配
+例如：<code v-pre>芙芙点歌 使一颗心</code>，即可点歌<code v-pre>《使一颗心免于哀伤》</code></p>
+<p><a href="https://cloud.yuchu.me/s/KRCv" target="_blank" rel="noopener noreferrer">附赠一些网上搜集的AI翻唱资源</a></p>
 <p>如果您在使用语音处理功能时遇到任何问题，或有改进建议，请在我们的 <a href="https://github.com/syuchua/QFurina/issues" target="_blank" rel="noopener noreferrer">GitHub Issues</a> 上反馈。</p>
 </div></template>
 

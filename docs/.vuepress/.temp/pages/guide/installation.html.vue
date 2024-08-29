@@ -24,8 +24,19 @@
 <div class="language-bash line-numbers-mode line-numbers-mode" data-highlighter="prismjs" data-ext="sh" data-title="sh"><pre v-pre  class="shiki github-dark vp-code" style="background-color:#24292e;color:#e1e4e8 language-bash"><code><span class="line"><span class="line"><span style="color:#B392F0">docker-compose</span><span style="color:#9ECBFF"> up</span><span style="color:#79B8FF"> -d</span></span></span></code></pre>
 <div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"></div><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div></li>
 <li>
-<p>查看日志：</p>
-<div class="language-bash line-numbers-mode line-numbers-mode" data-highlighter="prismjs" data-ext="sh" data-title="sh"><pre v-pre  class="shiki github-dark vp-code" style="background-color:#24292e;color:#e1e4e8 language-bash"><code><span class="line"><span class="line"><span style="color:#B392F0">docker-compose</span><span style="color:#9ECBFF"> logs</span><span style="color:#79B8FF"> -f</span></span></span></code></pre>
+<p>进入napcat目录编辑配置文件：</p>
+<div class="language-bash line-numbers-mode line-numbers-mode" data-highlighter="prismjs" data-ext="sh" data-title="sh"><pre v-pre  class="shiki github-dark vp-code" style="background-color:#24292e;color:#e1e4e8 language-bash"><code><span class="line"><span class="line"><span style="color:#79B8FF">cd</span><span style="color:#9ECBFF"> napcat/config</span><span style="color:#E1E4E8"> &#x26;&#x26; </span><span style="color:#B392F0">vim</span><span style="color:#9ECBFF"> onebot11.json</span></span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"></div><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><p>修改reverseWS:</p>
+<div class="language-json line-numbers-mode line-numbers-mode" data-highlighter="prismjs" data-ext="json" data-title="json"><pre v-pre  class="shiki github-dark vp-code" style="background-color:#24292e;color:#e1e4e8 language-json"><code><span class="line"><span class="line"><span style="color:#E1E4E8">{</span></span></span>
+<span class="line"><span class="line"><span style="color:#79B8FF">   "reverseWs"</span><span style="color:#E1E4E8">:{</span></span></span>
+<span class="line"><span class="line"><span style="color:#79B8FF">      "enable"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">true</span><span style="color:#E1E4E8">,</span></span></span>
+<span class="line"><span class="line"><span style="color:#79B8FF">      "urls"</span><span style="color:#E1E4E8">: [</span><span style="color:#9ECBFF">"ws://my_qbot:8011/ws"</span><span style="color:#E1E4E8">]</span></span></span>
+<span class="line"><span class="line"><span style="color:#E1E4E8">   }</span></span></span>
+<span class="line"><span class="line"><span style="color:#E1E4E8">}</span></span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></li>
+<li>
+<p>查看napcat日志，扫码登录：</p>
+<div class="language-bash line-numbers-mode line-numbers-mode" data-highlighter="prismjs" data-ext="sh" data-title="sh"><pre v-pre  class="shiki github-dark vp-code" style="background-color:#24292e;color:#e1e4e8 language-bash"><code><span class="line"><span class="line"><span style="color:#B392F0">docker</span><span style="color:#9ECBFF"> logs</span><span style="color:#9ECBFF"> napcat</span></span></span></code></pre>
 <div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"></div><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div></li>
 </ol>
 <h2 id="本地部署" tabindex="-1"><a class="header-anchor" href="#本地部署"><span>本地部署</span></a></h2>

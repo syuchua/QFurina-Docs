@@ -16,11 +16,6 @@
 <p>例如：<code v-pre>@QFurina 你好，今天天气怎么样？</code></p>
 </li>
 <li>
-<p><strong>切换角色</strong>：
-使用特定命令来切换机器人的角色设定。</p>
-<p>例如：<code v-pre>/character 科学家</code></p>
-</li>
-<li>
 <p><strong>重置对话</strong>：
 如果想开始新的对话主题，可以使用重置命令。</p>
 <p>例如：<code v-pre>/reset</code></p>

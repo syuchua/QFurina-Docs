@@ -19,7 +19,7 @@ Lagrange 是一个跨平台的 QQ 客户端，本指南将帮助您将 QFurina �
    - 找到 OneBot 协议设置
    - 启用 OneBot 协议
    - 设置监听地址和端口(修改配置文件)
-   ```
+   ```JSON
     {
       "Type": "ReverseWebSocket",
       "Host": "0.0.0.0",
@@ -30,7 +30,7 @@ Lagrange 是一个跨平台的 QQ 客户端，本指南将帮助您将 QFurina �
       "HeartBeatEnable": true,
       "AccessToken": "",
     },
-    ```
+   ```
 
 2. 编辑 QFurina 的配置文件 `config/config.json`：
 

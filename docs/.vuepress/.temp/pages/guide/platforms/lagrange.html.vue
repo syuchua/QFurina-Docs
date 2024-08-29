@@ -2,9 +2,17 @@
 <p>Lagrange 是一个跨平台的 QQ 客户端，本指南将帮助您将 QFurina 与 Lagrange 进行对接。</p>
 <h2 id="准备工作" tabindex="-1"><a class="header-anchor" href="#准备工作"><span>准备工作</span></a></h2>
 <ol>
-<li>确保您已经安装了 QFurina。</li>
-<li>下载并安装 Lagrange。</li>
-<li>在 Lagrange 中启用 OneBot 协议支持。</li>
+<li>
+<p>确保您已经安装了 QFurina。</p>
+</li>
+<li>
+<p>下载并安装 Lagrange。
+官方文档：</p>
+<p>https://lagrangedev.github.io/Lagrange.Doc/</p>
+</li>
+<li>
+<p>在 Lagrange 中启用 OneBot 协议支持。</p>
+</li>
 </ol>
 <h2 id="配置步骤" tabindex="-1"><a class="header-anchor" href="#配置步骤"><span>配置步骤</span></a></h2>
 <ol>
@@ -14,18 +22,25 @@
 <li>打开 Lagrange 设置</li>
 <li>找到 OneBot 协议设置</li>
 <li>启用 OneBot 协议</li>
-<li>设置监听地址和端口（例如：<code v-pre>127.0.0.1:5700</code>）</li>
+<li>设置监听地址和端口(修改配置文件)</li>
 </ul>
-</li>
+<div class="language-JSON line-numbers-mode line-numbers-mode" data-highlighter="prismjs" data-ext="JSON" data-title="JSON"><pre v-pre  class="shiki github-dark vp-code" style="background-color:#24292e;color:#e1e4e8 language-JSON"><code><span class="line"><span class="line"><span style="color:#E1E4E8"> {</span></span></span>
+<span class="line"><span class="line"><span style="color:#79B8FF">   "Type"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"ReverseWebSocket"</span><span style="color:#E1E4E8">,</span></span></span>
+<span class="line"><span class="line"><span style="color:#79B8FF">   "Host"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"0.0.0.0"</span><span style="color:#E1E4E8">,</span></span></span>
+<span class="line"><span class="line"><span style="color:#79B8FF">   "Port"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">8011</span><span style="color:#E1E4E8">,</span></span></span>
+<span class="line"><span class="line"><span style="color:#79B8FF">   "Suffix"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"/ws"</span><span style="color:#E1E4E8">,</span></span></span>
+<span class="line"><span class="line"><span style="color:#79B8FF">   "ReconnectInterval"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">5000</span><span style="color:#E1E4E8">,</span></span></span>
+<span class="line"><span class="line"><span style="color:#79B8FF">   "HeartBeatInterval"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">5000</span><span style="color:#E1E4E8">,</span></span></span>
+<span class="line"><span class="line"><span style="color:#79B8FF">   "HeartBeatEnable"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">true</span><span style="color:#E1E4E8">,</span></span></span>
+<span class="line"><span class="line"><span style="color:#79B8FF">   "AccessToken"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">""</span><span style="color:#E1E4E8">,</span></span></span>
+<span class="line"><span class="line"><span style="color:#E1E4E8"> },</span></span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></li>
 <li>
 <p>编辑 QFurina 的配置文件 <code v-pre>config/config.json</code>：</p>
 <div class="language-json line-numbers-mode line-numbers-mode" data-highlighter="prismjs" data-ext="json" data-title="json"><pre v-pre  class="shiki github-dark vp-code" style="background-color:#24292e;color:#e1e4e8 language-json"><code><span class="line"><span class="line"><span style="color:#E1E4E8">{</span></span></span>
-<span class="line"><span class="line"><span style="color:#79B8FF">  "connection_type"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"ws_reverse"</span><span style="color:#E1E4E8">,</span></span></span>
-<span class="line"><span class="line"><span style="color:#79B8FF">  "ws_reverse_url"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"ws://127.0.0.1:5700"</span><span style="color:#E1E4E8">,</span></span></span>
-<span class="line"><span class="line"><span style="color:#79B8FF">  "use_http"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">false</span></span></span>
+<span class="line"><span class="line"><span style="color:#79B8FF">  "connection_type"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"ws_reverse"</span></span></span>
 <span class="line"><span class="line"><span style="color:#E1E4E8">}</span></span></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>确保 <code v-pre>ws_reverse_url</code> 与 Lagrange 中设置的地址和端口一致。</p>
-</li>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div></div><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></li>
 <li>
 <p>启动 Lagrange 和 QFurina 服务。</p>
 </li>
@@ -37,7 +52,9 @@
 <div class="language-bash line-numbers-mode line-numbers-mode" data-highlighter="prismjs" data-ext="sh" data-title="sh"><pre v-pre  class="shiki github-dark vp-code" style="background-color:#24292e;color:#e1e4e8 language-bash"><code><span class="line"><span class="line"><span style="color:#B392F0">python</span><span style="color:#9ECBFF"> main.py</span></span></span></code></pre>
 <div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"></div><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div></li>
 <li>
-<p>检查 QFurina 的日志输出，确保没有连接错误。</p>
+<p>检查 QFurina 的日志输出，确保没有连接错误。
+如果连接无误的话，你可以看到：</p>
+<p><img src="https://img.yuchu.me/file/f8f9c5d0cbe210269acb6.png" alt=""></p>
 </li>
 <li>
 <p>在 Lagrange 中向机器人发送消息，测试是否能正常回复。</p>

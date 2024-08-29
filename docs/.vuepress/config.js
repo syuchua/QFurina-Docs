@@ -57,7 +57,6 @@ export default defineUserConfig({
           children: [
             { text: 'QFurina 简介', link: '/guide/' },
             { text: '安装与配置', link: '/guide/installation' },
-            { text: '基本使用', link: '/guide/usage' },
             {
               text: '平台对接',
               children: [

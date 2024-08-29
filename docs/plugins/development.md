@@ -10,10 +10,11 @@
 ## 步骤 1：创建插件目录
 
 在 QFurina 的 `plugins` 目录下创建一个新文件夹，命名为 `hello_world`：
-```
-QFurina/
-└── plugins/
-└── hello_world/
+
+```bash
+   QFurina/
+   └── plugins/
+   └── hello_world/
 ```
 
 

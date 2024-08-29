@@ -7,9 +7,9 @@
 </ul>
 <h2 id="步骤-1-创建插件目录" tabindex="-1"><a class="header-anchor" href="#步骤-1-创建插件目录"><span>步骤 1：创建插件目录</span></a></h2>
 <p>在 QFurina 的 <code v-pre>plugins</code> 目录下创建一个新文件夹，命名为 <code v-pre>hello_world</code>：</p>
-<div class="language-text line-numbers-mode line-numbers-mode" data-highlighter="prismjs" data-ext="text" data-title="text"><pre v-pre  class="shiki github-dark vp-code" style="background-color:#24292e;color:#e1e4e8 language-text"><code><span class="line"><span class="line"><span>QFurina/</span></span></span>
-<span class="line"><span class="line"><span>└── plugins/</span></span></span>
-<span class="line"><span class="line"><span>└── hello_world/</span></span></span></code></pre>
+<div class="language-bash line-numbers-mode line-numbers-mode" data-highlighter="prismjs" data-ext="sh" data-title="sh"><pre v-pre  class="shiki github-dark vp-code" style="background-color:#24292e;color:#e1e4e8 language-bash"><code><span class="line"><span class="line"><span style="color:#B392F0">   QFurina/</span></span></span>
+<span class="line"><span class="line"><span style="color:#B392F0">   └──</span><span style="color:#9ECBFF"> plugins/</span></span></span>
+<span class="line"><span class="line"><span style="color:#B392F0">   └──</span><span style="color:#9ECBFF"> hello_world/</span></span></span></code></pre>
 <div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div></div><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2 id="步骤-2-创建主插件文件" tabindex="-1"><a class="header-anchor" href="#步骤-2-创建主插件文件"><span>步骤 2：创建主插件文件</span></a></h2>
 <p>要创建一个新插件，您需要：</p>
 <ol>
