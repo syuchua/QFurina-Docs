@@ -92,7 +92,7 @@ export default defineUserConfig({
   }),
 
   bundler: viteBundler(),
-  base: '/QFurina-Docs/',
+  base: '/',
 
   plugins: [
     searchPlugin({
