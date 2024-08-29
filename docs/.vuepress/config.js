@@ -3,7 +3,7 @@ import { defineUserConfig } from 'vuepress/cli'
 import { viteBundler } from '@vuepress/bundler-vite'
 import { searchPlugin } from '@vuepress/plugin-search'
 import { mediumZoomPlugin } from '@vuepress/plugin-medium-zoom'
-import { copyCodePlugin } from '@vuepress/plugin-copy-code'
+import { shikiPlugin } from '@vuepress/plugin-shiki'
 
 export default defineUserConfig({
 
@@ -131,8 +131,8 @@ export default defineUserConfig({
         },
       },
     }),
-    copyCodePlugin({
-      showInMobile: true,
+    shikiPlugin({
+      theme: 'github-dark'  // 或其他主题
     }),
     mediumZoomPlugin({}),
   ],

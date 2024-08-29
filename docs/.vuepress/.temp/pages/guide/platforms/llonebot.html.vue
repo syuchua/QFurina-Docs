@@ -9,23 +9,21 @@
 <ol>
 <li>
 <p>编辑 QFurina 的配置文件 <code v-pre>config/config.json</code>：</p>
-<div class="language-json line-numbers-mode" data-highlighter="prismjs" data-ext="json" data-title="json"><pre v-pre><code><span class="line"><span class="token punctuation">{</span></span>
-<span class="line">  <span class="token property">"connection_type"</span><span class="token operator">:</span> <span class="token string">"ws_reverse"</span><span class="token punctuation">,</span></span>
-<span class="line">  <span class="token property">"ws_reverse_url"</span><span class="token operator">:</span> <span class="token string">"ws://your_llonebot_ip:your_port"</span><span class="token punctuation">,</span></span>
-<span class="line">  <span class="token property">"ws_reverse_api_url"</span><span class="token operator">:</span> <span class="token string">"ws://your_llonebot_ip:your_port/api"</span><span class="token punctuation">,</span></span>
-<span class="line">  <span class="token property">"ws_reverse_event_url"</span><span class="token operator">:</span> <span class="token string">"ws://your_llonebot_ip:your_port/event"</span><span class="token punctuation">,</span></span>
-<span class="line">  <span class="token property">"use_http"</span><span class="token operator">:</span> <span class="token boolean">false</span></span>
-<span class="line"><span class="token punctuation">}</span></span>
-<span class="line"></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>将 <code v-pre>your_llonebot_ip</code> 和 <code v-pre>your_port</code> 替换为您的 Llonebot 实际地址和端口。</p>
+<div class="language-json line-numbers-mode line-numbers-mode" data-highlighter="prismjs" data-ext="json" data-title="json"><pre v-pre  class="shiki github-dark vp-code" style="background-color:#24292e;color:#e1e4e8 language-json"><code><span class="line"><span class="line"><span style="color:#E1E4E8">{</span></span></span>
+<span class="line"><span class="line"><span style="color:#79B8FF">  "connection_type"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"ws_reverse"</span><span style="color:#E1E4E8">,</span></span></span>
+<span class="line"><span class="line"><span style="color:#79B8FF">  "ws_reverse_url"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"ws://your_llonebot_ip:your_port"</span><span style="color:#E1E4E8">,</span></span></span>
+<span class="line"><span class="line"><span style="color:#79B8FF">  "ws_reverse_api_url"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"ws://your_llonebot_ip:your_port/api"</span><span style="color:#E1E4E8">,</span></span></span>
+<span class="line"><span class="line"><span style="color:#79B8FF">  "ws_reverse_event_url"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"ws://your_llonebot_ip:your_port/event"</span><span style="color:#E1E4E8">,</span></span></span>
+<span class="line"><span class="line"><span style="color:#79B8FF">  "use_http"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">false</span></span></span>
+<span class="line"><span class="line"><span style="color:#E1E4E8">}</span></span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>将 <code v-pre>your_llonebot_ip</code> 和 <code v-pre>your_port</code> 替换为您的 Llonebot 实际地址和端口。</p>
 </li>
 <li>
 <p>在 Llonebot 的配置文件中，确保启用了反向 WebSocket 连接：</p>
-<div class="language-yaml line-numbers-mode" data-highlighter="prismjs" data-ext="yml" data-title="yml"><pre v-pre><code><span class="line"><span class="token key atrule">servers</span><span class="token punctuation">:</span></span>
-<span class="line">  <span class="token punctuation">-</span> <span class="token key atrule">ws_reverse</span><span class="token punctuation">:</span></span>
-<span class="line">      <span class="token key atrule">universal</span><span class="token punctuation">:</span> ws<span class="token punctuation">:</span>//127.0.0.1<span class="token punctuation">:</span>8080/onebot/v11/ws</span>
-<span class="line"></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>这里的地址应该与 QFurina 运行的地址和端口相匹配。</p>
+<div class="language-yaml line-numbers-mode line-numbers-mode" data-highlighter="prismjs" data-ext="yml" data-title="yml"><pre v-pre  class="shiki github-dark vp-code" style="background-color:#24292e;color:#e1e4e8 language-yaml"><code><span class="line"><span class="line"><span style="color:#85E89D">servers</span><span style="color:#E1E4E8">:</span></span></span>
+<span class="line"><span class="line"><span style="color:#E1E4E8">  - </span><span style="color:#85E89D">ws_reverse</span><span style="color:#E1E4E8">:</span></span></span>
+<span class="line"><span class="line"><span style="color:#85E89D">      universal</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">ws://127.0.0.1:8080/onebot/v11/ws</span></span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div></div><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>这里的地址应该与 QFurina 运行的地址和端口相匹配。</p>
 </li>
 <li>
 <p>重启 Llonebot 和 QFurina 服务。</p>
@@ -35,9 +33,8 @@
 <ol>
 <li>
 <p>启动 QFurina：</p>
-<div class="language-bash line-numbers-mode" data-highlighter="prismjs" data-ext="sh" data-title="sh"><pre v-pre><code><span class="line">python main.py</span>
-<span class="line"></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div></li>
+<div class="language-bash line-numbers-mode line-numbers-mode" data-highlighter="prismjs" data-ext="sh" data-title="sh"><pre v-pre  class="shiki github-dark vp-code" style="background-color:#24292e;color:#e1e4e8 language-bash"><code><span class="line"><span class="line"><span style="color:#B392F0">python</span><span style="color:#9ECBFF"> main.py</span></span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"></div><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div></li>
 <li>
 <p>检查 QFurina 的日志输出，确保没有连接错误。</p>
 </li>

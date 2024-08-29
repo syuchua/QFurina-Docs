@@ -1,7 +1,4 @@
 import {
-  setupDevtoolsPlugin
-} from "./chunk-NTV4DQBC.js";
-import {
   computed,
   defineComponent,
   getCurrentInstance,
@@ -20,6 +17,9 @@ import {
   watch,
   watchEffect
 } from "./chunk-SBJ3TJEH.js";
+import {
+  setupDevtoolsPlugin
+} from "./chunk-NTV4DQBC.js";
 
 // node_modules/vue-router/dist/vue-router.mjs
 var isBrowser = typeof document !== "undefined";

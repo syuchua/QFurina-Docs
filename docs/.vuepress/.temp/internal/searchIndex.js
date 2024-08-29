@@ -286,6 +286,13 @@ export const SEARCH_INDEX = [
     "extraFields": []
   },
   {
+    "title": "",
+    "headers": [],
+    "path": "/guide/faq.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
     "title": "安装与配置",
     "headers": [
       {
@@ -351,7 +358,7 @@ export const SEARCH_INDEX = [
     "extraFields": []
   },
   {
-    "title": "",
+    "title": "插件基类",
     "headers": [],
     "path": "/plugins/api.html",
     "pathLocale": "/",
@@ -482,9 +489,9 @@ export const SEARCH_INDEX = [
       },
       {
         "level": 2,
-        "title": "社区插件",
-        "slug": "社区插件",
-        "link": "#社区插件",
+        "title": "社区插件(待完善)",
+        "slug": "社区插件-待完善",
+        "link": "#社区插件-待完善",
         "children": []
       },
       {
@@ -500,9 +507,38 @@ export const SEARCH_INDEX = [
     "extraFields": []
   },
   {
-    "title": "",
-    "headers": [],
-    "path": "/404.html",
+    "title": "Lagrange 对接指南",
+    "headers": [
+      {
+        "level": 2,
+        "title": "准备工作",
+        "slug": "准备工作",
+        "link": "#准备工作",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "配置步骤",
+        "slug": "配置步骤",
+        "link": "#配置步骤",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "验证连接",
+        "slug": "验证连接",
+        "link": "#验证连接",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "常见问题",
+        "slug": "常见问题",
+        "link": "#常见问题",
+        "children": []
+      }
+    ],
+    "path": "/guide/platforms/lagrange.html",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -579,45 +615,9 @@ export const SEARCH_INDEX = [
     "extraFields": []
   },
   {
-    "title": "Lagrange 对接指南",
-    "headers": [
-      {
-        "level": 2,
-        "title": "准备工作",
-        "slug": "准备工作",
-        "link": "#准备工作",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "配置步骤",
-        "slug": "配置步骤",
-        "link": "#配置步骤",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "验证连接",
-        "slug": "验证连接",
-        "link": "#验证连接",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "常见问题",
-        "slug": "常见问题",
-        "link": "#常见问题",
-        "children": []
-      }
-    ],
-    "path": "/guide/platforms/lagrange.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
     "title": "",
     "headers": [],
-    "path": "/guide/faq.html",
+    "path": "/404.html",
     "pathLocale": "/",
     "extraFields": []
   }

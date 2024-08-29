@@ -30,10 +30,10 @@ QFurina 的插件系统是一个强大而灵活的功能扩展机制，允许开
 
 QFurina 提供了一套简单的插件管理命令：
 
-- `/plugin list`：列出所有已安装的插件。
-- `/plugin enable <plugin_name>`：启用指定插件。
-- `/plugin disable <plugin_name>`：禁用指定插件。
-- `/plugin reload <plugin_name>`：重新加载指定插件。
+- `/list_plugins`：列出所有已安装的插件。
+- `/enable_plugin <plugin_name>`：启用指定插件。
+- `/disable_plugin <plugin_name>`：禁用指定插件。
+- `/reload_plugin <plugin_name>`：重新加载指定插件。
 
 ## 开发你的第一个插件
 
@@ -51,9 +51,9 @@ QFurina 提供了一套简单的插件管理命令：
 4. **版本兼容性**：明确声明插件兼容的 QFurina 版本。
 5. **文档**：为你的插件提供清晰的文档和使用说明。
 
-## 社区插件
+## 社区插件(待完善)
 
-QFurina 有一个活跃的插件开发社区。你可以在我们的 [插件仓库](https://github.com/syuchua/QFurina-plugins) 中找到各种有用的插件。
+<!-- QFurina 有一个活跃的插件开发社区。你可以在我们的 [插件仓库](https://github.com/syuchua/QFurina-plugins) 中找到各种有用的插件。 -->
 
 如果你开发了一个优秀的插件，欢迎提交到社区仓库与其他用户分享！
 

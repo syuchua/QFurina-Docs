@@ -11,47 +11,40 @@
 <ol>
 <li>
 <p>克隆项目并进入目录：</p>
-<div class="language-bash line-numbers-mode" data-highlighter="prismjs" data-ext="sh" data-title="sh"><pre v-pre><code><span class="line"><span class="token function">git</span> clone <span class="token parameter variable">-b</span> dev https://github.com/syuchua/QFurina.git</span>
-<span class="line"><span class="token builtin class-name">cd</span> QFurina <span class="token operator">&amp;&amp;</span> <span class="token function">mkdir</span> data <span class="token operator">&amp;&amp;</span> <span class="token builtin class-name">cd</span> data <span class="token operator">&amp;&amp;</span> <span class="token function">mkdir</span> music <span class="token operator">&amp;&amp;</span> <span class="token builtin class-name">cd</span> <span class="token punctuation">..</span>/</span>
-<span class="line"></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div></div></div></li>
+<div class="language-bash line-numbers-mode line-numbers-mode" data-highlighter="prismjs" data-ext="sh" data-title="sh"><pre v-pre  class="shiki github-dark vp-code" style="background-color:#24292e;color:#e1e4e8 language-bash"><code><span class="line"><span class="line"><span style="color:#B392F0">git</span><span style="color:#9ECBFF"> clone</span><span style="color:#79B8FF"> -b</span><span style="color:#9ECBFF"> dev</span><span style="color:#9ECBFF"> https://github.com/syuchua/QFurina.git</span></span></span>
+<span class="line"><span class="line"><span style="color:#79B8FF">cd</span><span style="color:#9ECBFF"> QFurina</span><span style="color:#E1E4E8"> &#x26;&#x26; </span><span style="color:#B392F0">mkdir</span><span style="color:#9ECBFF"> data</span><span style="color:#E1E4E8"> &#x26;&#x26; </span><span style="color:#79B8FF">cd</span><span style="color:#9ECBFF"> data</span><span style="color:#E1E4E8"> &#x26;&#x26; </span><span style="color:#B392F0">mkdir</span><span style="color:#9ECBFF"> music</span><span style="color:#E1E4E8"> &#x26;&#x26; </span><span style="color:#79B8FF">cd</span><span style="color:#9ECBFF"> ../</span></span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div></div></div></li>
 <li>
 <p>编辑配置文件：</p>
-<div class="language-bash line-numbers-mode" data-highlighter="prismjs" data-ext="sh" data-title="sh"><pre v-pre><code><span class="line"><span class="token function">nano</span> config/config.json</span>
-<span class="line"></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><p>根据需要修改配置文件内容。如果需要配置 GPT 以外的模型，可以修改 <code v-pre>model.json</code>，其中 <code v-pre>vision</code> 项表示模型是否支持识图。</p>
+<div class="language-bash line-numbers-mode line-numbers-mode" data-highlighter="prismjs" data-ext="sh" data-title="sh"><pre v-pre  class="shiki github-dark vp-code" style="background-color:#24292e;color:#e1e4e8 language-bash"><code><span class="line"><span class="line"><span style="color:#B392F0">nano</span><span style="color:#9ECBFF"> config/config.json</span></span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"></div><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><p>根据需要修改配置文件内容。如果需要配置 GPT 以外的模型，可以修改 <code v-pre>model.json</code>，其中 <code v-pre>vision</code> 项表示模型是否支持识图。</p>
 </li>
 <li>
 <p>启动服务：</p>
-<div class="language-bash line-numbers-mode" data-highlighter="prismjs" data-ext="sh" data-title="sh"><pre v-pre><code><span class="line"><span class="token function">docker-compose</span> up <span class="token parameter variable">-d</span></span>
-<span class="line"></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div></li>
+<div class="language-bash line-numbers-mode line-numbers-mode" data-highlighter="prismjs" data-ext="sh" data-title="sh"><pre v-pre  class="shiki github-dark vp-code" style="background-color:#24292e;color:#e1e4e8 language-bash"><code><span class="line"><span class="line"><span style="color:#B392F0">docker-compose</span><span style="color:#9ECBFF"> up</span><span style="color:#79B8FF"> -d</span></span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"></div><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div></li>
 <li>
 <p>查看日志：</p>
-<div class="language-bash line-numbers-mode" data-highlighter="prismjs" data-ext="sh" data-title="sh"><pre v-pre><code><span class="line"><span class="token function">docker-compose</span> logs <span class="token parameter variable">-f</span></span>
-<span class="line"></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div></li>
+<div class="language-bash line-numbers-mode line-numbers-mode" data-highlighter="prismjs" data-ext="sh" data-title="sh"><pre v-pre  class="shiki github-dark vp-code" style="background-color:#24292e;color:#e1e4e8 language-bash"><code><span class="line"><span class="line"><span style="color:#B392F0">docker-compose</span><span style="color:#9ECBFF"> logs</span><span style="color:#79B8FF"> -f</span></span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"></div><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div></li>
 </ol>
 <h2 id="本地部署" tabindex="-1"><a class="header-anchor" href="#本地部署"><span>本地部署</span></a></h2>
 <p>如果您prefer更灵活的配置或者无法使用 Docker，可以选择本地部署。</p>
 <ol>
 <li>
 <p>克隆项目：</p>
-<div class="language-bash line-numbers-mode" data-highlighter="prismjs" data-ext="sh" data-title="sh"><pre v-pre><code><span class="line"><span class="token function">git</span> clone <span class="token parameter variable">-b</span> dev https://github.com/syuchua/QFurina.git</span>
-<span class="line"><span class="token builtin class-name">cd</span> QFurina <span class="token operator">&amp;&amp;</span> <span class="token function">mkdir</span> data <span class="token operator">&amp;&amp;</span> <span class="token builtin class-name">cd</span> data <span class="token operator">&amp;&amp;</span> <span class="token function">mkdir</span> music <span class="token operator">&amp;&amp;</span> <span class="token builtin class-name">cd</span> <span class="token punctuation">..</span>/</span>
-<span class="line"></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div></div></div></li>
+<div class="language-bash line-numbers-mode line-numbers-mode" data-highlighter="prismjs" data-ext="sh" data-title="sh"><pre v-pre  class="shiki github-dark vp-code" style="background-color:#24292e;color:#e1e4e8 language-bash"><code><span class="line"><span class="line"><span style="color:#B392F0">git</span><span style="color:#9ECBFF"> clone</span><span style="color:#79B8FF"> -b</span><span style="color:#9ECBFF"> dev</span><span style="color:#9ECBFF"> https://github.com/syuchua/QFurina.git</span></span></span>
+<span class="line"><span class="line"><span style="color:#79B8FF">cd</span><span style="color:#9ECBFF"> QFurina</span><span style="color:#E1E4E8"> &#x26;&#x26; </span><span style="color:#B392F0">mkdir</span><span style="color:#9ECBFF"> data</span><span style="color:#E1E4E8"> &#x26;&#x26; </span><span style="color:#79B8FF">cd</span><span style="color:#9ECBFF"> data</span><span style="color:#E1E4E8"> &#x26;&#x26; </span><span style="color:#B392F0">mkdir</span><span style="color:#9ECBFF"> music</span><span style="color:#E1E4E8"> &#x26;&#x26; </span><span style="color:#79B8FF">cd</span><span style="color:#9ECBFF"> ../</span></span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div></div></div></li>
 <li>
 <p>创建虚拟环境 (可选但推荐)：</p>
-<div class="language-bash line-numbers-mode" data-highlighter="prismjs" data-ext="sh" data-title="sh"><pre v-pre><code><span class="line">python <span class="token parameter variable">-m</span> venv venv</span>
-<span class="line"><span class="token builtin class-name">source</span> venv/bin/activate  <span class="token comment"># Windows 使用: venv\Scripts\activate</span></span>
-<span class="line"></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div></div></div></li>
+<div class="language-bash line-numbers-mode line-numbers-mode" data-highlighter="prismjs" data-ext="sh" data-title="sh"><pre v-pre  class="shiki github-dark vp-code" style="background-color:#24292e;color:#e1e4e8 language-bash"><code><span class="line"><span class="line"><span style="color:#B392F0">python</span><span style="color:#79B8FF"> -m</span><span style="color:#9ECBFF"> venv</span><span style="color:#9ECBFF"> venv</span></span></span>
+<span class="line"><span class="line"><span style="color:#79B8FF">source</span><span style="color:#9ECBFF"> venv/bin/activate</span><span style="color:#6A737D">  # Windows 使用: venv\Scripts\activate</span></span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div></div></div></li>
 <li>
 <p>安装依赖：</p>
-<div class="language-bash line-numbers-mode" data-highlighter="prismjs" data-ext="sh" data-title="sh"><pre v-pre><code><span class="line">pip <span class="token function">install</span> <span class="token parameter variable">-r</span> requirements.txt</span>
-<span class="line"></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div></li>
+<div class="language-bash line-numbers-mode line-numbers-mode" data-highlighter="prismjs" data-ext="sh" data-title="sh"><pre v-pre  class="shiki github-dark vp-code" style="background-color:#24292e;color:#e1e4e8 language-bash"><code><span class="line"><span class="line"><span style="color:#B392F0">pip</span><span style="color:#9ECBFF"> install</span><span style="color:#79B8FF"> -r</span><span style="color:#9ECBFF"> requirements.txt</span></span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"></div><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div></li>
 <li>
 <p>配置：
 编辑 <code v-pre>config/config.json</code> 文件，根据需要修改配置。主要配置项包括：</p>
@@ -75,9 +68,8 @@
 </li>
 <li>
 <p>运行：</p>
-<div class="language-bash line-numbers-mode" data-highlighter="prismjs" data-ext="sh" data-title="sh"><pre v-pre><code><span class="line">python main.py</span>
-<span class="line"></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div></li>
+<div class="language-bash line-numbers-mode line-numbers-mode" data-highlighter="prismjs" data-ext="sh" data-title="sh"><pre v-pre  class="shiki github-dark vp-code" style="background-color:#24292e;color:#e1e4e8 language-bash"><code><span class="line"><span class="line"><span style="color:#B392F0">python</span><span style="color:#9ECBFF"> main.py</span></span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"></div><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div></li>
 </ol>
 <h2 id="下一步" tabindex="-1"><a class="header-anchor" href="#下一步"><span>下一步</span></a></h2>
 <p>安装完成后，您需要选择一个消息平台进行对接。QFurina 支持多种消息平台，包括 Llonebot、NapCat 和 Lagrange 等。请参考以下指南进行平台对接：</p>

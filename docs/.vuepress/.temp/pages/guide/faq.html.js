@@ -1,5 +1,5 @@
 import comp from "D:/vue-press/QFurina/docs/.vuepress/.temp/pages/guide/faq.html.vue"
-const data = JSON.parse("{\"path\":\"/guide/faq.html\",\"title\":\"\",\"lang\":\"zh-CN\",\"frontmatter\":{},\"headers\":[],\"git\":{\"updatedTime\":null},\"filePathRelative\":\"guide/faq.md\"}")
+const data = JSON.parse("{\"path\":\"/guide/faq.html\",\"title\":\"\",\"lang\":\"zh-CN\",\"frontmatter\":{},\"headers\":[],\"git\":{\"updatedTime\":1724928462000},\"filePathRelative\":\"guide/faq.md\"}")
 export { comp, data }
 
 if (import.meta.webpackHot) {

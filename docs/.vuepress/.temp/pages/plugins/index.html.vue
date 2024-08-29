@@ -26,10 +26,10 @@
 <h2 id="插件管理" tabindex="-1"><a class="header-anchor" href="#插件管理"><span>插件管理</span></a></h2>
 <p>QFurina 提供了一套简单的插件管理命令：</p>
 <ul>
-<li><code v-pre>/plugin list</code>：列出所有已安装的插件。</li>
-<li><code v-pre>/plugin enable &lt;plugin_name&gt;</code>：启用指定插件。</li>
-<li><code v-pre>/plugin disable &lt;plugin_name&gt;</code>：禁用指定插件。</li>
-<li><code v-pre>/plugin reload &lt;plugin_name&gt;</code>：重新加载指定插件。</li>
+<li><code v-pre>/list_plugins</code>：列出所有已安装的插件。</li>
+<li><code v-pre>/enable_plugin &lt;plugin_name&gt;</code>：启用指定插件。</li>
+<li><code v-pre>/disable_plugin &lt;plugin_name&gt;</code>：禁用指定插件。</li>
+<li><code v-pre>/reload_plugin &lt;plugin_name&gt;</code>：重新加载指定插件。</li>
 </ul>
 <h2 id="开发你的第一个插件" tabindex="-1"><a class="header-anchor" href="#开发你的第一个插件"><span>开发你的第一个插件</span></a></h2>
 <p>要开始开发 QFurina 插件，请查看我们的 <RouteLink to="/plugins/development.html">插件开发指南</RouteLink>。</p>
@@ -43,8 +43,8 @@
 <li><strong>版本兼容性</strong>：明确声明插件兼容的 QFurina 版本。</li>
 <li><strong>文档</strong>：为你的插件提供清晰的文档和使用说明。</li>
 </ol>
-<h2 id="社区插件" tabindex="-1"><a class="header-anchor" href="#社区插件"><span>社区插件</span></a></h2>
-<p>QFurina 有一个活跃的插件开发社区。你可以在我们的 <a href="https://github.com/syuchua/QFurina-plugins" target="_blank" rel="noopener noreferrer">插件仓库</a> 中找到各种有用的插件。</p>
+<h2 id="社区插件-待完善" tabindex="-1"><a class="header-anchor" href="#社区插件-待完善"><span>社区插件(待完善)</span></a></h2>
+<!-- QFurina 有一个活跃的插件开发社区。你可以在我们的 [插件仓库](https://github.com/syuchua/QFurina-plugins) 中找到各种有用的插件。 -->
 <p>如果你开发了一个优秀的插件，欢迎提交到社区仓库与其他用户分享！</p>
 <h2 id="常见问题" tabindex="-1"><a class="header-anchor" href="#常见问题"><span>常见问题</span></a></h2>
 <p>如果你在使用或开发插件时遇到问题，请查看我们的 <RouteLink to="/guide/faq.html">常见问题解答</RouteLink> 或在 <a href="https://github.com/syuchua/QFurina/issues" target="_blank" rel="noopener noreferrer">GitHub Issues</a> 上提问。</p>
