@@ -40,6 +40,8 @@ class ExamplePlugin(PluginBase):
         self.description = "This is an example plugin"
 
     async def on_message(self, message):
+      content = message.get('content', '')
+      if "hello plugin" in content.lower()
         return "hello world!"
 
     async def on_file_upload(self, file_path):
@@ -51,7 +53,7 @@ class ExamplePlugin(PluginBase):
 
 ## 步骤 3：创建插件配置文件
 
-在 `hello_world` 目录中创建一个名为 `plugin.json` 的文件并填写配置信息(如果用到)：
+在 `hello_world` 目录中创建一个名为 `config.json` 的文件并填写配置信息(如果用到)：
 ```json
 {
    "api_url": "https://example.com",
