@@ -65,6 +65,17 @@ Docker 部署是最简单和推荐的方式，它已经集成了 [NapCat](https:
    docker logs napcat
    ```
 
+## linux使用一键脚本部署（docker方式）
+
+```bash
+bash <(curl -s https://raw.githubusercontent.com/syuchua/QFurina-install/main/install.sh)
+```
+或者
+
+```bash
+bash <((wget -qO- https://raw.githubusercontent.com/syuchua/QFurina-install/main/install.sh)
+```
+
 ## 本地部署
 
 如果您prefer更灵活的配置或者无法使用 Docker，可以选择本地部署。
