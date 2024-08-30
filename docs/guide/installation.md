@@ -4,7 +4,7 @@
 
 ## 系统要求
 
-- Python 3.8+
+- Python 3.11+
 - pip (Python 包管理器)
 - Git (用于克隆仓库)
 
@@ -24,28 +24,39 @@ Docker 部署是最简单和推荐的方式，它已经集成了 [NapCat](https:
    ```bash
    nano config/config.json
    ```
-
+  
    根据需要修改配置文件内容。如果需要配置 GPT 以外的模型，可以修改 `model.json`，其中 `vision` 项表示模型是否支持识图。
 
-3. 启动服务：
+3. 编辑docker-compose.yaml，修改机器人账号：
+
+   ```bash
+   nano docker-compose.yaml
+   ```
+   找到napcat部分：
+
+   ```yaml
+   napcat:
+    image: mlikiowa/napcat-docker:latest
+    container_name: napcat
+    environment:
+      - ACCOUNT=123456789 # 修改为机器人QQ号
+      - WSR_ENABLE=true
+      - WS_URLS=["ws://qq_bot:8011/ws"]
+    ports:
+      - "6099:6099"
+    volumes:
+      - ./napcat:/app/napcat
+    restart: always
+    depends_on:
+      - qq_bot
+   ```
+
+
+4. 启动服务：
 
    ```bash
    docker-compose up -d
    ```
-
-4. 进入napcat目录编辑配置文件：
-
-   ```bash
-   cd napcat/config && vim onebot11.json
-   ```
-   修改reverseWS:
-   ```json
-   {
-      "reverseWs":{
-         "enable": true,
-         "urls": ["ws://my_qbot:8011/ws"]
-      }
-   }
 
 
 5. 查看napcat日志，扫码登录：

@@ -2,7 +2,7 @@
 <p>本指南将帮助您安装和配置 QFurina。QFurina 支持多种部署方式，包括 Docker 部署和本地部署。</p>
 <h2 id="系统要求" tabindex="-1"><a class="header-anchor" href="#系统要求"><span>系统要求</span></a></h2>
 <ul>
-<li>Python 3.8+</li>
+<li>Python 3.11+</li>
 <li>pip (Python 包管理器)</li>
 <li>Git (用于克隆仓库)</li>
 </ul>
@@ -20,20 +20,28 @@
 <div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"></div><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><p>根据需要修改配置文件内容。如果需要配置 GPT 以外的模型，可以修改 <code v-pre>model.json</code>，其中 <code v-pre>vision</code> 项表示模型是否支持识图。</p>
 </li>
 <li>
+<p>编辑docker-compose.yaml，修改机器人账号：</p>
+<div class="language-bash line-numbers-mode line-numbers-mode" data-highlighter="prismjs" data-ext="sh" data-title="sh"><pre v-pre  class="shiki github-dark vp-code" style="background-color:#24292e;color:#e1e4e8 language-bash"><code><span class="line"><span class="line"><span style="color:#B392F0">nano</span><span style="color:#9ECBFF"> docker-compose.yaml</span></span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"></div><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><p>找到napcat部分：</p>
+<div class="language-yaml line-numbers-mode line-numbers-mode" data-highlighter="prismjs" data-ext="yml" data-title="yml"><pre v-pre  class="shiki github-dark vp-code" style="background-color:#24292e;color:#e1e4e8 language-yaml"><code><span class="line"><span class="line"><span style="color:#85E89D">napcat</span><span style="color:#E1E4E8">:</span></span></span>
+<span class="line"><span class="line"><span style="color:#85E89D"> image</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">mlikiowa/napcat-docker:latest</span></span></span>
+<span class="line"><span class="line"><span style="color:#85E89D"> container_name</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">napcat</span></span></span>
+<span class="line"><span class="line"><span style="color:#85E89D"> environment</span><span style="color:#E1E4E8">:</span></span></span>
+<span class="line"><span class="line"><span style="color:#E1E4E8">   - </span><span style="color:#9ECBFF">ACCOUNT=123456789</span><span style="color:#6A737D"> # 修改为机器人QQ号</span></span></span>
+<span class="line"><span class="line"><span style="color:#E1E4E8">   - </span><span style="color:#9ECBFF">WSR_ENABLE=true</span></span></span>
+<span class="line"><span class="line"><span style="color:#E1E4E8">   - </span><span style="color:#9ECBFF">WS_URLS=["ws://qq_bot:8011/ws"]</span></span></span>
+<span class="line"><span class="line"><span style="color:#85E89D"> ports</span><span style="color:#E1E4E8">:</span></span></span>
+<span class="line"><span class="line"><span style="color:#E1E4E8">   - </span><span style="color:#9ECBFF">"6099:6099"</span></span></span>
+<span class="line"><span class="line"><span style="color:#85E89D"> volumes</span><span style="color:#E1E4E8">:</span></span></span>
+<span class="line"><span class="line"><span style="color:#E1E4E8">   - </span><span style="color:#9ECBFF">./napcat:/app/napcat</span></span></span>
+<span class="line"><span class="line"><span style="color:#85E89D"> restart</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">always</span></span></span>
+<span class="line"><span class="line"><span style="color:#85E89D"> depends_on</span><span style="color:#E1E4E8">:</span></span></span>
+<span class="line"><span class="line"><span style="color:#E1E4E8">   - </span><span style="color:#9ECBFF">qq_bot</span></span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></li>
+<li>
 <p>启动服务：</p>
 <div class="language-bash line-numbers-mode line-numbers-mode" data-highlighter="prismjs" data-ext="sh" data-title="sh"><pre v-pre  class="shiki github-dark vp-code" style="background-color:#24292e;color:#e1e4e8 language-bash"><code><span class="line"><span class="line"><span style="color:#B392F0">docker-compose</span><span style="color:#9ECBFF"> up</span><span style="color:#79B8FF"> -d</span></span></span></code></pre>
 <div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"></div><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div></li>
-<li>
-<p>进入napcat目录编辑配置文件：</p>
-<div class="language-bash line-numbers-mode line-numbers-mode" data-highlighter="prismjs" data-ext="sh" data-title="sh"><pre v-pre  class="shiki github-dark vp-code" style="background-color:#24292e;color:#e1e4e8 language-bash"><code><span class="line"><span class="line"><span style="color:#79B8FF">cd</span><span style="color:#9ECBFF"> napcat/config</span><span style="color:#E1E4E8"> &#x26;&#x26; </span><span style="color:#B392F0">vim</span><span style="color:#9ECBFF"> onebot11.json</span></span></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"></div><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><p>修改reverseWS:</p>
-<div class="language-json line-numbers-mode line-numbers-mode" data-highlighter="prismjs" data-ext="json" data-title="json"><pre v-pre  class="shiki github-dark vp-code" style="background-color:#24292e;color:#e1e4e8 language-json"><code><span class="line"><span class="line"><span style="color:#E1E4E8">{</span></span></span>
-<span class="line"><span class="line"><span style="color:#79B8FF">   "reverseWs"</span><span style="color:#E1E4E8">:{</span></span></span>
-<span class="line"><span class="line"><span style="color:#79B8FF">      "enable"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">true</span><span style="color:#E1E4E8">,</span></span></span>
-<span class="line"><span class="line"><span style="color:#79B8FF">      "urls"</span><span style="color:#E1E4E8">: [</span><span style="color:#9ECBFF">"ws://my_qbot:8011/ws"</span><span style="color:#E1E4E8">]</span></span></span>
-<span class="line"><span class="line"><span style="color:#E1E4E8">   }</span></span></span>
-<span class="line"><span class="line"><span style="color:#E1E4E8">}</span></span></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></li>
 <li>
 <p>查看napcat日志，扫码登录：</p>
 <div class="language-bash line-numbers-mode line-numbers-mode" data-highlighter="prismjs" data-ext="sh" data-title="sh"><pre v-pre  class="shiki github-dark vp-code" style="background-color:#24292e;color:#e1e4e8 language-bash"><code><span class="line"><span class="line"><span style="color:#B392F0">docker</span><span style="color:#9ECBFF"> logs</span><span style="color:#9ECBFF"> napcat</span></span></span></code></pre>

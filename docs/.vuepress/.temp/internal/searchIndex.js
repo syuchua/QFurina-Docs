@@ -64,6 +64,13 @@ export const SEARCH_INDEX = [
     "extraFields": []
   },
   {
+    "title": "",
+    "headers": [],
+    "path": "/api/",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
     "title": "AI 对话系统",
     "headers": [
       {
@@ -211,71 +218,6 @@ export const SEARCH_INDEX = [
       }
     ],
     "path": "/features/voice.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "",
-    "headers": [],
-    "path": "/guide/faq.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "安装与配置",
-    "headers": [
-      {
-        "level": 2,
-        "title": "系统要求",
-        "slug": "系统要求",
-        "link": "#系统要求",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "Docker 部署 (推荐)",
-        "slug": "docker-部署-推荐",
-        "link": "#docker-部署-推荐",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "本地部署",
-        "slug": "本地部署",
-        "link": "#本地部署",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "下一步",
-        "slug": "下一步",
-        "link": "#下一步",
-        "children": []
-      }
-    ],
-    "path": "/guide/installation.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "QFurina 简介",
-    "headers": [
-      {
-        "level": 2,
-        "title": "主要特性",
-        "slug": "主要特性",
-        "link": "#主要特性",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "为什么选择 QFurina？",
-        "slug": "为什么选择-qfurina",
-        "link": "#为什么选择-qfurina",
-        "children": []
-      }
-    ],
-    "path": "/guide/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -429,6 +371,71 @@ export const SEARCH_INDEX = [
     "extraFields": []
   },
   {
+    "title": "",
+    "headers": [],
+    "path": "/guide/faq.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "安装与配置",
+    "headers": [
+      {
+        "level": 2,
+        "title": "系统要求",
+        "slug": "系统要求",
+        "link": "#系统要求",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "Docker 部署 (推荐)",
+        "slug": "docker-部署-推荐",
+        "link": "#docker-部署-推荐",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "本地部署",
+        "slug": "本地部署",
+        "link": "#本地部署",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "下一步",
+        "slug": "下一步",
+        "link": "#下一步",
+        "children": []
+      }
+    ],
+    "path": "/guide/installation.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "QFurina 简介",
+    "headers": [
+      {
+        "level": 2,
+        "title": "主要特性",
+        "slug": "主要特性",
+        "link": "#主要特性",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "为什么选择 QFurina？",
+        "slug": "为什么选择-qfurina",
+        "link": "#为什么选择-qfurina",
+        "children": []
+      }
+    ],
+    "path": "/guide/",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
     "title": "Lagrange 对接指南",
     "headers": [
       {
@@ -540,13 +547,6 @@ export const SEARCH_INDEX = [
     "title": "",
     "headers": [],
     "path": "/404.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "",
-    "headers": [],
-    "path": "/api/",
     "pathLocale": "/",
     "extraFields": []
   }
