@@ -41,14 +41,14 @@ Docker 部署是最简单和推荐的方式，它已经集成了 [NapCat](https:
     environment:
       - ACCOUNT=123456789 # 修改为机器人QQ号
       - WSR_ENABLE=true
-      - WS_URLS=["ws://qq_bot:8011/ws"]
+      - WS_URLS=["ws://my_qbot:8011/ws"]
     ports:
       - "6099:6099"
     volumes:
       - ./napcat:/app/napcat
     restart: always
     depends_on:
-      - qq_bot
+      - my_qbot
    ```
 
 
