@@ -29,7 +29,7 @@
 示例插件代码：
 在 `hello_world` 目录中创建一个名为 `hello_world.py` 的文件：
 ```python
-from app.plugin.plugin_base import PluginBase
+from qfurina.api import PluginBase
 
 @PluginBase.register("example")
 class ExamplePlugin(PluginBase):
